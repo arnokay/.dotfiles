@@ -2,5 +2,4 @@ zsh
 curl
 wget
 git
-neovim
 stow
