@@ -31,21 +31,6 @@ execute_scripts() {
 
 cd "$DOTFILES_PATH"
 
-
-# Create symlinks using stow
-if [ ! -f "$STOW_FOLDERS_FILE" ]; then
-  echo "Error: $STOW_FOLDERS_FILE not found."
-  exit 1
-fi
-
-while IFS= read -r folder; do
-  if [ -n "$folder" ]; then
-    stow -D "$folder"
-    stow "$folder"
-    echo "Symlinks for $folder created."
-  fi
-done < "$STOW_FOLDERS_FILE"
-
 # Install required packages and tools
 if [ -f "$REQUIREMENTS_FILE" ]; then
   if prompt_user "Do you want to install all required packages and tools?"; then
@@ -64,6 +49,20 @@ else
   echo "Required file: $REQUIREMENTS_FILE"
   exit 1
 fi
+
+# Create symlinks using stow
+if [ ! -f "$STOW_FOLDERS_FILE" ]; then
+  echo "Error: $STOW_FOLDERS_FILE not found."
+  exit 1
+fi
+
+while IFS= read -r folder; do
+  if [ -n "$folder" ]; then
+    stow -D "$folder"
+    stow "$folder"
+    echo "Symlinks for $folder created."
+  fi
+done < "$STOW_FOLDERS_FILE"
 
 # Execute scripts from the 'packages' folder
 if prompt_user "Do you want to execute custom package installation scripts?"; then

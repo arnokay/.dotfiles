@@ -5,6 +5,7 @@ echo "Installing NeoVim..."
 # Remove NeoVim from common locations
 sudo rm -f /usr/local/bin/nvim
 sudo rm -f /usr/bin/nvim
+sudo rm -f /opt/nvim
 
 # Download NeoVim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
