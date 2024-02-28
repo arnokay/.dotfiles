@@ -4,3 +4,4 @@ curl
 wget
 git
 stow
+tmux
