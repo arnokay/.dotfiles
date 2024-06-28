@@ -5,3 +5,6 @@ wget
 git
 stow
 tmux
+ripgrep
+fzf
+lua5.4
