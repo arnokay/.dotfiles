@@ -11,3 +11,6 @@
 - - fix plugins for zsh
 - - add removing files before stow or stow before any install
 - add rust
+- fix nvm
+- oh-my-zsh script have error because script is sh and not zsh
+- use multiple scripts instead of install.sh
