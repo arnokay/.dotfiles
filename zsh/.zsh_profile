@@ -1,0 +1,12 @@
+# neovim aliases
+alias vim="nvim"
+alias v="vim ."
+
+# git aliases
+alias gst="git status"
+alias gaa="git add ."
+
+# shell aliases
+alias cl="clear" 
+alias dot="cd ~/.dotfiles" 
+alias vdot="dot && v"

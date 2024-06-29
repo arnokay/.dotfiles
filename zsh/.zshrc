@@ -16,7 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 [[ -s "/home/arnokay/.gvm/scripts/gvm" ]] && source "/home/arnokay/.gvm/scripts/gvm"
 
@@ -127,4 +127,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="nvim"
+source ~/.zsh_profile
