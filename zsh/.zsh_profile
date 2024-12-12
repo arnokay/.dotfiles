@@ -6,3 +6,32 @@ alias v="vim ."
 alias cl="clear" 
 alias dot="cd ~/.dotfiles" 
 alias vdot="dot && v"
+alias vnvim="cd ~/.dotfiles/nvim/.config/nvim && v"
+# alias gfall="git fetch --all"
+# alias gp="git pull"
+# alias gf="git fetch"
+# alias gc="git commit"
+# alias ga="git add"
+# alias gs="git switch"
+# alias gsc="git switch -c"
+alias gs="git stash"
+alias gsp="git stash pop"
+alias kaka="shit"
+alias shit="poop"
+alias poop='echo "
+   )  )
+  (   ) (
+   ) _   )
+    ( \_
+  _(_\ \)__
+ (____\___))"'
+
+ addToPathFront() {
+   if [[ "$PATH" != *"$1"* ]]; then
+     export PATH=$1:$PATH
+   fi
+ }
+
+ addToPathFront $HOME/.local/scripts
+
+bindkey -s ^f "tmux-sessionizer\n"

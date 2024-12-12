@@ -2,3 +2,4 @@ nvim
 tmux
 zsh
 personal
+bin
